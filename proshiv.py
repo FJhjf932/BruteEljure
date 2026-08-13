@@ -24,7 +24,7 @@ def replace_word_file(file_path, old, new):
     with open(file_path, 'w', encoding='utf-8', errors='ignore') as file:
         file.write(new_content)
 
-d = int(input("Сколько: "))
+d = int(input("Сколько скриптов: "))
 logiin = str(input("логин: ")).strip()
 q = sum(1 for line in open('brute.txt', encoding='utf-8', errors='replace'))
 v = (q//d)
