@@ -57,7 +57,7 @@ def reg(login_val, password_val):
                     if not redirect_url.startswith("http"):
                         redirect_url = BASE + redirect_url
                     print(f"Совпадение найденно: {login_val}   -   {password_val}")
-                    return "sigma"
+                    return "OK"
         else:
             print("Неожиданный ответ сервера")
     except Exception as e:
@@ -76,7 +76,7 @@ with open('FILE_BRUTE_REG', 'r', encoding='utf-8', errors='replace') as file:
             print("Пароля в словаре нет")
             break
         count_brute += 1
-        if reg(login, password) == "sigma":
+        if reg(login, password) == "OK":
             break
         else:
             count += 1
